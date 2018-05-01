@@ -8,11 +8,13 @@
     <body>
         <div style="margin-left:100px;" class="g-signin2" data-onsuccess="onSignIn" data-onfailure="onFail"></div>
         <script>
+            var googleUser;
+            var profile = googleUser.getBasicProfile();
+            var profileEmail = profile.getEmail();
+            
             function onSignIn(googleUser) {
-                var profile = googleUser.getBasicProfile();
                 var profileImg = profile.getImageUrl();
                 var profileName = profile.getName();
-                var profileEmail = profile.getEmail();
             }
         setTimeout(First,3000);
         function First(){
