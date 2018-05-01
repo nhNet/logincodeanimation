@@ -1,10 +1,19 @@
 <html>
     <head>
-    <style>body{color:white;background:#333333;}</style>
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="398993796104-lq9k21a411mnehe5p94brocp3rs72dr5.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <style>body{color:white;background:#333333;}</style>
     </head>
     <body>
+        <div style="margin-left:100px;" class="g-signin2" data-onsuccess="onSignIn" data-onfailure="onFail"></div>
         <script>
-        var profileEmail="default@gmail.com";
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                var profileImg = profile.getImageUrl();
+                var profileName = profile.getName();
+                var profileEmail = profile.getEmail();
+            }
         First();
         function First(){
             setTimeout(function(){document.body.innerHTML="<h3>&#60;&nbsp;&nbsp;&nbsp;&nbsp;//HuamanCodeConsole 2018</h3><h3>&#60;&nbsp;&nbsp;&nbsp;&nbsp;//Initializing code.</h3><h3>&#60;&nbsp;&nbsp;&nbsp;&nbsp;|</h3>";},0);
