@@ -15,7 +15,9 @@
                 var profileEmail = profile.getEmail();
 		var names = profileFullName.split(" ");
 		var firstName = names[0];
-		document.body.innerHTML='<h1>Sorry, '+firstName+', the developer of this browser has decided to shut down this project.</h1>';
-            }
+	        if (profileEmail!=="spbong999@gmail.com" || profileEmail!=="nicholas.hua@kcpupils.org"){
+			document.body.innerHTML='<h1>Sorry, '+firstName+', the developer of this browser has decided to shut down this project.</h1>';            
+		}
+	    }
 	</script>
 </html>
